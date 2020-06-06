@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+<div class="badge badge-primary text-wrap font-italic text-center" style="width: 6rem;">
+ Articles page </div>
+
+{%for article in articles %}
+<h2><a href="#">{{article.title}}</a></h2>
+<p>{{article.snippet}}</p>
+<p>{{article.date}}</p>
+{% endfor %}
+
+</body>
+</html>
